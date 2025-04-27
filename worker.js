@@ -72,25 +72,87 @@ async function handleStaticAsset(request, path) {
   };
   
   // Determine content type based on file extension
-  const extension = assetPath.substring(assetPath.lastIndexOf('.'));
+  const extension = assetPath.substring(assetPath.lastIndexOf('.') || 0);
   const contentType = contentTypes[extension] || 'text/plain';
   
-  // Fetch the asset from KV or your preferred storage
-  // For this example, we'll use a simple fetch from the frontend directory
-  const response = await fetch(`https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend${assetPath}`);
+  // Fix relative paths that start with ./
+  let githubPath = assetPath;
+  if (githubPath.startsWith('./')) {
+    githubPath = githubPath.substring(1); // Remove the dot but keep the slash
+  }
   
-  if (response.ok) {
-    const content = await response.text();
-    return new Response(content, {
-      headers: {
-        'Content-Type': contentType,
-        'Cache-Control': 'max-age=3600',
-        'Access-Control-Allow-Origin': '*'
+  // Fetch the asset from GitHub repository
+  try {
+    const response = await fetch(`https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend${githubPath}`);
+    
+    if (response.ok) {
+      // For text-based content
+      if (contentType.startsWith('text/') || contentType === 'application/json') {
+        const content = await response.text();
+        return new Response(content, {
+          headers: {
+            'Content-Type': contentType,
+            'Cache-Control': 'max-age=3600',
+            'Access-Control-Allow-Origin': '*'
+          }
+        });
+      } 
+      // For binary content (images, etc.)
+      else {
+        const blob = await response.blob();
+        const arrayBuffer = await blob.arrayBuffer();
+        return new Response(arrayBuffer, {
+          headers: {
+            'Content-Type': contentType,
+            'Cache-Control': 'max-age=86400', // Cache images longer
+            'Access-Control-Allow-Origin': '*'
+          }
+        });
       }
-    });
-  } else {
-    return new Response(`File not found: ${assetPath}`, {
-      status: 404,
+    } else {
+      console.error(`File not found on GitHub: ${githubPath}, Status: ${response.status}`);
+      
+      // Try without the leading slash as a fallback
+      if (githubPath.startsWith('/')) {
+        const altPath = githubPath.substring(1);
+        const altResponse = await fetch(`https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend/${altPath}`);
+        
+        if (altResponse.ok) {
+          if (contentType.startsWith('text/') || contentType === 'application/json') {
+            const content = await altResponse.text();
+            return new Response(content, {
+              headers: {
+                'Content-Type': contentType,
+                'Cache-Control': 'max-age=3600',
+                'Access-Control-Allow-Origin': '*'
+              }
+            });
+          } else {
+            const blob = await altResponse.blob();
+            const arrayBuffer = await blob.arrayBuffer();
+            return new Response(arrayBuffer, {
+              headers: {
+                'Content-Type': contentType,
+                'Cache-Control': 'max-age=86400',
+                'Access-Control-Allow-Origin': '*'
+              }
+            });
+          }
+        }
+      }
+      
+      return new Response(`File not found: ${assetPath}`, {
+        status: 404,
+        headers: {
+          'Content-Type': 'text/plain',
+          'Access-Control-Allow-Origin': '*'
+        }
+      });
+    }
+  } catch (error) {
+    console.error(`Error fetching ${githubPath}: ${error.message}`);
+    return new Response(`Error fetching file: ${error.message}`, {
+      status: 500,
       headers: {
         'Content-Type': 'text/plain',
         'Access-Control-Allow-Origin': '*'
