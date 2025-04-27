@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobsForHer Foundation - Empowering Women's Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #00A650;
+            --dark-green: #008C44;
+            --light-green: #E6F4EB;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        .bg-primary-green {
+            background-color: var(--primary-green);
+        }
+        .text-primary-green {
+            color: var(--primary-green);
+        }
+        .hover\:bg-dark-green:hover {
+            background-color: var(--dark-green);
+        }
+        .bg-light-green {
+            background-color: var(--light-green);
+        }
+    </style>
+</head>
+<body class="font-open-sans">
+    <!-- Top Bar -->
+    <div class="bg-primary-green text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <a href="tel:+918147378390" class="flex items-center text-sm hover:text-green-200">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span>+91 814737 8390</span>
+                </a>
+                <a href="mailto:foundation@jobsforher.com" class="flex items-center text-sm hover:text-green-200">
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                    <span>foundation@jobsforher.com</span>
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="https://www.facebook.com/JobsforherFoundation" class="hover:text-green-200">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/jobsforher_foundation" class="hover:text-green-200">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.649.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-1.38-.898-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.438-.645 1.438-1.44s-.643-1.44-1.438-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/jobsforherfoundation/" class="hover:text-green-200">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-40"> 
+        <div class="container mx-auto px-4 py-4"> 
+            <div class="flex flex-wrap justify-between items-center gap-2">
+                <!-- Logo -->
+                <a href="/" class="flex items-center">
+                    <img src="images/jobsforher-foundation-logo.png" alt="JobsForHer Foundation Logo" class="h-10 md:h-12">
+                </a>
+                
+                <!-- Global Search Bar -->
+                <div class="hidden md:flex flex-1 max-w-2xl mx-4">
+                    <div class="relative w-full">
+                        <input type="text" placeholder="Search jobs, sessions, blogs, companies, people..."  
+                               class="w-full pl-12 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green"> 
+                        <div class="absolute left-4 top-2.5"> 
+                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> 
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Navigation Menu -->
+                <nav class="hidden lg:flex space-x-4 order-3 lg:order-none">
+                    <a href="#jobs" class="text-gray-600 hover:text-primary-green px-2">Jobs</a>
+                    <a href="#sessions" class="text-gray-600 hover:text-primary-green px-2">Sessions</a>
+                    <a href="#network" class="text-gray-600 hover:text-primary-green px-2">Network</a>
+                </nav>
+    
+                <!-- Right Side Elements -->
+                <div class="flex items-center space-x-2 md:space-x-4">
+                    <!-- Logout Button -->
+                    <!-- <button onclick="logout()" class="bg-red-500 text-white px-3 py-2 rounded-full hover:bg-red-600 transition duration-300 flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                        </svg>
+                        Logout
+                    </button> -->
+
+                    <!-- Talk to Asha Button -->
+                    <button data-chat="open" class="bg-primary-green text-white px-3 py-2 md:px-6 rounded-full hover:bg-dark-green transition duration-300 flex items-center"> 
+                        <svg class="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"> 
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2v-6a2 2 0 012-2h14a2 2 0 012 2v6a2 2 0 01-2 2h-5l-5 5v-5z"/> 
+                        </svg> 
+                        <span class="text-sm md:text-base">Talk to Asha AI</span>
+                    </button>
+    
+                    <!-- Profile Dropdown -->
+                    <div class="relative" id="profileDropdown">
+                        <button onclick="toggleDropdown()" class="flex items-center space-x-1 md:space-x-2"> 
+                            <img src="./images/profile.jpg" alt="Profile" class="w-8 h-8 rounded-full"> 
+                            <svg class="w-4 h-4 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"> 
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/> 
+                            </svg> 
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div id="dropdownMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden">
+                            <button onclick="logout()" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                <svg class="w-4 h-4 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                                </svg>
+                                Logout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Mobile Menu Button (appears on smaller screens) -->
+                <button class="lg:hidden ml-2 p-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Mobile Search (appears on smaller screens) -->
+        <div class="md:hidden px-4 pb-3">
+            <div class="relative w-full">
+                <input type="text" placeholder="Search..."  
+                       class="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green"> 
+                <div class="absolute left-3 top-2.5"> 
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"> 
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-light-green py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Elevate. Excel. Inspire</h1>
+                    <p class="text-xl text-gray-600 mb-8">For the Equal Future of Women at Work & Beyond</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="btn-primary">Get Involved</a>
+                        <a href="#programs" class="btn-secondary">Our Programs</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="images/jfh_foundation_banner.jpg" alt="Women in Career" class="rounded-lg shadow-xl w-full w-[3000px]">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-2 rounded-lg shadow-lg hidden md:block">
+                        <div class="flex items-center gap-6">
+                            <div class="bg-primary-green rounded-full p-3">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h14a2 2 0 012 2v6a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold">10,000+</p>
+                                <p class="text-sm text-gray-500">Women Empowered</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="prose text-gray-600">
+                        <p class="mb-4">JobsForHer Foundation, a Charitable Trust launched in 2018, is dedicated to enhancing the status of women in the workplace and beyond. Located in Bengaluru, the foundation is dedicated to promoting positive transformation and ensuring equal opportunities for women throughout India.</p>
+                        <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Our Vision and Mission</h3>
+                        <p class="mb-4">With a keen understanding of the importance of enabling women, the trust is on a mission to foster their career advancement and beyond. This involves unlocking their untapped potential and enhancing self-confidence through initiatives in education, skill development, and facilitating connections with various opportunities on HerKey.</p>
+                        <p class="font-semibold text-primary-green">Our key focus areas include:</p>
+                        <ul class="list-disc pl-5 mt-4 space-y-2">
+                            <li>Promoting gender equality and empowering women</li>
+                            <li>Providing accessible learning opportunities</li>
+                            <li>Fostering professional development</li>
+                            <li>Building supportive communities</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-light-green p-6 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-primary-green mb-2">500+</div>
+                        <p class="text-gray-600">Corporate Partners</p>
+                    </div>
+                    <div class="bg-light-green p-6 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-primary-green mb-2">1000+</div>
+                        <p class="text-gray-600">Mentors</p>
+                    </div>
+                    <div class="bg-light-green p-6 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-primary-green mb-2">50+</div>
+                        <p class="text-gray-600">Cities Reached</p>
+                    </div>
+                    <div class="bg-light-green p-6 rounded-lg text-center">
+                        <div class="text-3xl font-bold text-primary-green mb-2">10K+</div>
+                        <p class="text-gray-600">Women Placed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Why Choose JobsForHer Foundation?</h2>
+                <p class="text-gray-600 mt-4">We provide comprehensive support to women looking to restart and advance their careers</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-light-green rounded-lg p-6">
+                    <div class="bg-primary-green rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6a2 2 0 01-2-2v-6a2 2 0 012-2h14a2 2 0 012 2v6a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Personalized Guidance</h3>
+                    <p class="text-gray-600">Get one-on-one mentorship from industry experts who understand your career goals</p>
+                </div>
+                <div class="bg-light-green rounded-lg p-6">
+                    <div class="bg-primary-green rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Corporate Partnerships</h3>
+                    <p class="text-gray-600">Access exclusive job opportunities from our network of 500+ corporate partners</p>
+                </div>
+                <div class="bg-light-green rounded-lg p-6">
+                    <div class="bg-primary-green rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Skill Enhancement</h3>
+                    <p class="text-gray-600">Access industry-relevant courses and workshops to stay competitive in your field</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary-green mb-2">10,000+</div>
+                    <div class="text-gray-600">Women Impacted</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary-green mb-2">500+</div>
+                    <div class="text-gray-600">Corporate Partners</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-primary-green mb-2">95%</div>
+                    <div class="text-gray-600">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Latest Jobs</h2>
+                <div class="flex space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search jobs..." class="pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green">
+                        <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <select class="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-green">
+                        <option>All Categories</option>
+                        <option>Technology</option>
+                        <option>Marketing</option>
+                        <option>Finance</option>
+                        <option>HR</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Job Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Senior Software Engineer</h3>
+                            <p class="text-primary-green">Infosys</p>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Full-time</span>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <div class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Bangalore, India (Hybrid)</span>
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Posted 2 days ago</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Java</span>
+                        <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Spring Boot</span>
+                        <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">React</span>
+                    </div>
+                    <button class="w-full bg-primary-green text-white py-2 rounded-lg hover:bg-dark-green transition duration-300">Apply Now</button>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Product Marketing Manager</h3>
+                            <p class="text-primary-green">UI Path</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Remote</span>
+                    </div>
+                    <div class="space-y-3 mb-4">
+                        <div class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>Remote (India)</span>
+                        </div>
+                        <div class="flex items-center text-gray-600">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>Posted 1 day ago</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Marketing</span>
+                        <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Product</span>
+                        <span class="bg-gray-100 text-gray-800 text-sm px-3 py-1 rounded-full">Strategy</span>
+                    </div>
+                    <button class="w-full bg-primary-green text-white py-2 rounded-lg hover:bg-dark-green transition duration-300">Apply Now</button>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-white text-primary-green border-2 border-primary-green px-6 py-2 rounded-lg hover:bg-primary-green hover:text-white transition duration-300">View More Jobs</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessions Section -->
+    <section id="sessions" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold">Upcoming Sessions</h2>
+                <div class="flex space-x-4">
+                    <select class="border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-green">
+                        <option>All Types</option>
+                        <option>Workshops</option>
+                        <option>Webinars</option>
+                        <option>Mentorship</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Session Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="images/session-tech.jpg" alt="Tech Workshop" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm">Live</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Advanced Cloud Computing</h3>
+                        <p class="text-gray-600 mb-4">Learn advanced cloud computing concepts with AWS certified experts.</p>
+                        <div class="space-y-3 mb-4">
+                            <div class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Tomorrow, 3:00 PM IST</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                                <span>Sarah Johnson, AWS Solutions Architect</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary-green text-white py-2 rounded-lg hover:bg-dark-green transition duration-300">Register Now</button>
+                    </div>
+                </div>
+
+                <!-- Session Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="images/session-leadership.jpg" alt="Leadership Session" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">Upcoming</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Women in Leadership Panel</h3>
+                        <p class="text-gray-600 mb-4">Join top women leaders as they share their journey and insights.</p>
+                        <div class="space-y-3 mb-4">
+                            <div class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Next Week, 5:00 PM IST</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                                <span>Multiple Industry Leaders</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary-green text-white py-2 rounded-lg hover:bg-dark-green transition duration-300">Register Now</button>
+                    </div>
+                </div>
+
+                <!-- Session Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="relative">
+                        <img src="images/session-mentorship.jpg" alt="Mentorship Session" class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Featured</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">1:1 Career Mentorship</h3>
+                        <p class="text-gray-600 mb-4">Book your slot for personalized career guidance and mentorship.</p>
+                        <div class="space-y-3 mb-4">
+                            <div class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Flexible Timing</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                                <span>Expert Mentors</span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-primary-green text-white py-2 rounded-lg hover:bg-dark-green transition duration-300">Book a Session</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button class="bg-white text-primary-green border-2 border-primary-green px-6 py-2 rounded-lg hover:bg-primary-green hover:text-white transition duration-300">View All Sessions</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 bg-light-green">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-12">Our Innovative Solutions</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- herShakti Program -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/jfh_foundation_gender_equality.jpg" alt="herShakti Program" class="w-full h-64 object-contain">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">herShakti</h3>
+                        <p class="text-gray-600 mb-6">A first-of-its kind government-industry consortium to upskill women in emerging technologies. This program is presented in collaboration with the Karnataka Digital Economy Mission (KDEM), under its W@W -Women at Work initiative, Infosys, UI Path, Broadridge.</p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Technology Focus Areas:</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>AI/ML</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>Big Data</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>Blockchain</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>Cyber Security</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>IPA</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>Cloud Computing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn-primary inline-block">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- DivHERsity Club -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/divhersity-club-3.png" alt="DivHERsity Club" class="w-full h-64 object-contain">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">DivHERsity.club</h3>
+                        <p class="text-gray-600 mb-6">A member-only community for leaders (and risers) for whom having a diverse and inclusive workplace isn't just a nice-to-have, it's a must-have. It's a platform for productive discussions around important DEI issues that corporate India is facing today.</p>
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Who's it for?</h4>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>D&I leaders, HR, Talent Recruitment Heads</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>Learning & Employee Network-related professionals</span>
+                                </li>
+                                <li class="flex items-start space-x-2">
+                                    <svg class="w-5 h-5 text-primary-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <span>VPs/AVPs, HODs, Directors, Executives, CXOs, Founders & Leaders</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn-primary inline-block">Join the Club</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center mb-12">The Team</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Neha Bagaria -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/neha-bagaria.jpg" alt="Neha Bagaria" class="w-full h-96 object-cover object-center" loading="lazy" width="400" height="384">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Neha Bagaria</h3>
+                        <p class="text-primary-green font-semibold mb-6">Managing Trustee, JobsForHer Foundation</p>
+                        <div class="prose text-gray-600">
+                            <p class="mb-4">Neha Bagaria is the Managing Trustee at JobsForHer Foundation – a Charitable Trust launched in 2018, dedicated to enhancing the status of women in the workplace and beyond.</p>
+                            <p class="mb-4">As the Founder & CEO of HerKey (formerly JobsForHer) – India's largest career engagement platform for women, she has been instrumental in unlocking opportunities, learning, and communities for women by connecting them with career champions since 2015.</p>
+                            <p class="mb-4">A Wharton graduate, Neha's impressive career includes founding Paragon, an educational company that brought the Advanced Placement Program to India, and working at Kemwell, a biotech company, in HR, Finance, and Marketing strategy.</p>
+                            <p class="mb-4">Her achievements have earned her recognition in Forbes India's WPower Trailblazers list and the BusinessLine Changemaker Awards 2023 for Social Transformation in India.</p>
+                            <p>Based in Bangalore and a mother to two athletic boys, Neha is an avid traveller and adventure sports enthusiast.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ashok Pamidi -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/ashok-pamidi.png" alt="Ashok Pamidi" class="w-full h-96 object-cover object-center" loading="lazy" width="400" height="384">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Ashok Pamidi</h3>
+                        <p class="text-primary-green font-semibold mb-6">Project Head – herShakti</p>
+                        <div class="prose text-gray-600">
+                            <p class="mb-4">Ashok is a 30-year industry veteran with extensive leadership experience. In his most recent role, he served as the CEO of NASSCOM Foundation.</p>
+                            <p class="mb-4">His impressive career includes positions as:</p>
+                            <ul class="list-disc pl-5 mb-4">
+                                <li>Geo Expansion Leader at IBM</li>
+                                <li>Transformation Leader at HP (Hewlett Packard)</li>
+                            </ul>
+                            <p class="mb-4">Throughout his career, Ashok has been involved as a strategic thought leader with various forums worldwide. He currently serves as an advisory board member for start-ups and as guest faculty for prominent Indian institutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-light-green">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Success Stories</h2>
+                <p class="text-gray-600 mt-4">Hear from women who transformed their careers with our support</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="images/testimonial-1.jpg" alt="Priya Sharma" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Priya Sharma</h4>
+                            <p class="text-gray-600">Software Engineer at Tech Corp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"After a 3-year career break, I was struggling to get back into tech. The mentorship program at JobsForHer Foundation was a game-changer. My mentor helped me update my skills, rebuild my confidence, and prepare for interviews. Today, I'm leading a development team and loving every moment of it!"</p>
+                    <div class="flex items-center text-primary-green">
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-6">
+                        <img src="images/testimonial-2.jpg" alt="Meera Patel" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Meera Patel</h4>
+                            <p class="text-gray-600">Digital Marketing Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The upskilling workshops at JobsForHer Foundation were exactly what I needed to transition into digital marketing. The practical knowledge and industry insights helped me land my dream job. The support from the community was incredible throughout my journey!"</p>
+                    <div class="flex items-center text-primary-green">
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-white text-primary-green px-8 py-3 rounded-full font-semibold hover:bg-primary-green hover:text-white transition duration-300 border-2 border-primary-green">
+                    Read More Success Stories
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-20 relative">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/50098-jfh_foundation_footer_image.jpg" alt="Contact Background" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-primary-green/90"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+                <!-- Get in Touch Section -->
+                <div class="text-white animate-fadeInUp backdrop-blur-sm bg-black/20 p-8 rounded-lg md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-8">Get in Touch</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white/10 rounded-full p-3">
+                                <img src="./images/location-icon-white.png" alt="Location" class="w-6 h-6">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Visit Us</h3>
+                                <p>11 Kemwell House, Tumkur Road, Bengaluru – 560022</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white/10 rounded-full p-3">
+                                <img src="./images/phone-icon-white.png" alt="Phone" class="w-6 h-6">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Call Us</h3>
+                                <a href="tel:+918147378390" class="hover:text-green-200 transition duration-300">+91 81473 78390</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-white/10 rounded-full p-3">
+                                <img src="./images/email-icon-white.png" alt="Email" class="w-6 h-6">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-1">Email Us</h3>
+                                <a href="mailto:info@jobsforherfoundation.org" class="hover:text-green-200 transition duration-300">info@jobsforherfoundation.org</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12">
+                        <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/JobsforherFoundation" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/jobsforher" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/company/jobsforherfoundation/" class="bg-white/10 p-3 rounded-full hover:bg-white/20 transition duration-300">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Contact Form Section -->
+                <div class="bg-white/50 backdrop-blur-sm rounded-lg shadow-xl p-8 animate-slideInLeft md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Send us a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-grey-700 mb-1">Full Name</label>
+                            <input type="text" id="name" name="name" 
+                                   class="w-full pl-4 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green bg-transparent backdrop-blur-sm placeholder-gray-500" 
+                                   placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" 
+                                   class="w-full pl-4 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green bg-transparent backdrop-blur-sm placeholder-gray-500" 
+                                   placeholder="Enter your email">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" name="subject" 
+                                   class="w-full pl-4 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green bg-transparent backdrop-blur-sm placeholder-gray-500" 
+                                   placeholder="How can we help?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" 
+                                    class="w-full pl-4 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-green bg-transparent backdrop-blur-sm placeholder-gray-500" 
+                                    placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-green text-white py-3 px-6 rounded-lg hover:bg-dark-green transition duration-300 transform hover:-translate-y-1 hover:shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Logo and Description -->
+                <div class="col-span-2">
+                    <img src="images/jobsforher-foundation-logo.png" alt="JobsForHer Foundation Logo" class="h-12 mb-4">
+                    <p class="text-gray-400 mb-6">JobsForHer Foundation is a not-for-profit organization dedicated to empowering women through career opportunities, mentorship, and skill development.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/JobsforherFoundation" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.8l-.443 2.89h-2.33v7C18.343 21.128 22 16.991 22 12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/jobsforher" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/jobsforherfoundation/" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white transition duration-300">Our Programs</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition duration-300">Our Team</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <img src="images/location-icon-white.png" alt="Location" class="w-4 h-4">
+                            <span class="text-gray-400">11 Kemwell House, Tumkur Road, Bengaluru – 560022</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="images/phone-icon-white.png" alt="Phone" class="w-4 h-4">
+                            <a href="tel:+918147378390" class="text-gray-400 hover:text-white">+91 81473 78390</a>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <img src="images/email-icon-white.png" alt="Email" class="w-4 h-4">
+                            <a href="mailto:info@jobsforherfoundation.org" class="text-gray-400 hover:text-white">info@jobsforherfoundation.org</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 JobsForHer Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <!-- Custom styling for n8n chat widget -->
+    <style>
+        :root {
+            /* Custom colors to match JobsForHer branding */
+            --chat--color-primary: #00A650; /* JobsForHer green color */
+            --chat--color-primary-shade-50: #008C44; /* Darker green */
+            --chat--color-primary-shade-100: #007A3D; /* Even darker green */
+            --chat--color-secondary: #00A650; /* Using primary color for consistency */
+            
+            /* Header styling */
+            --chat--header--background: #00A650; /* Green header */
+            --chat--header--color: white;
+            
+            /* Title styling */
+            --chat--heading--font-size: 1.5em;
+            --chat--header--color: white;
+            
+            /* Subtitle styling */
+            --chat--subtitle--font-size: 0.9em;
+            --chat--subtitle--line-height: 1.5;
+            
+            /* Message styling */
+            --chat--message--bot--background: #E6F4EB; /* Light green background for bot messages */
+            --chat--message--bot--color: #333333;
+            --chat--message--user--background: #00A650; /* Green background for user messages */
+            --chat--message--user--color: white;
+            
+            /* Toggle button styling */
+            --chat--toggle--background: #00A650;
+            --chat--toggle--hover--background: #008C44;
+            --chat--toggle--active--background: #007A3D;
+            --chat--toggle--color: white;
+        }
+
+        /* Additional styling for the chat modal */
+        #chat-modal-container {
+            z-index: 9999;
+        }
+
+        #n8n-chat-popup .n8n-chat-window {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Footer styling */
+        .n8n-chat-footer {
+            text-align: center !important;
+            width: 100% !important;
+            padding: 8px 0 !important;
+            font-size: 0.85em !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+        }
+        
+        /* Ensure the footer text is centered */
+        .n8n-chat-footer span {
+            margin: 0 auto !important;
+            text-align: center !important;
+        }
+    </style>
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+        window.createChat = createChat;
+    </script>
+    <script src="js/n8n-chat.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script>
+        // Profile dropdown script
+        function toggleDropdown() {
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            dropdownMenu.classList.toggle('hidden');
+        }
+
+        window.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('profileDropdown');
+            if (!dropdown.contains(e.target)) {
+                document.getElementById('dropdownMenu').classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
