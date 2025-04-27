@@ -1,0 +1,30 @@
+{
+  "build": {
+    "command": "npm run build",
+    "upload": {
+      "format": "service-worker",
+      "main": "worker.js",
+      "dir": "dist"
+    }
+  },
+  "deploy": {
+    "command": "npx wrangler deploy",
+    "environment": {
+      "NODE_ENV": "production"
+    }
+  },
+  "output": {
+    "directory": "dist",
+    "include": [
+      "frontend/**",
+      "worker.js",
+      "package.json",
+      "wrangler.toml"
+    ],
+    "exclude": [
+      "node_modules/**",
+      "backend/**",
+      ".git/**"
+    ]
+  }
+}

@@ -7,8 +7,9 @@
     "start": "concurrently \"npm run backend\" \"npm run frontend\"",
     "backend": "cd backend && node server.js",
     "frontend": "cd frontend && python -m http.server 5000",
-    "build": "npm install",
-    "deploy": "wrangler deploy"
+    "build": "node build.js",
+    "deploy": "wrangler deploy",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@cloudflare/kv-asset-handler": "^0.3.0",

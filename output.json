@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "output_directory": "dist",
+  "files": {
+    "include": [
+      "frontend/**/*",
+      "worker.js",
+      "wrangler.toml",
+      "package.json"
+    ],
+    "exclude": [
+      "node_modules/**",
+      "backend/**",
+      ".git/**",
+      "**/.DS_Store",
+      "**/*.log"
+    ]
+  },
+  "build": {
+    "command": "node build.js",
+    "environment": {
+      "NODE_ENV": "production"
+    }
+  },
+  "deploy": {
+    "command": "npx wrangler deploy",
+    "environment": {
+      "NODE_ENV": "production"
+    }
+  },
+  "routes": [
+    {
+      "pattern": "/api/*",
+      "script": "worker.js"
+    },
+    {
+      "pattern": "/*",
+      "static": true,
+      "root": "frontend"
+    }
+  ]
+}

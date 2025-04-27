@@ -4,3 +4,14 @@ compatibility_date = "2025-04-27"
 
 [site]
 bucket = "./frontend"
+
+[build]
+command = "node build.js"
+output_dir = "dist"
+watch_dir = "frontend"
+
+[env.production]
+route = "https://asha-ai-h2s.swasthikadevadiga2.workers.dev/*"
+
+[env.staging]
+name = "asha-ai-h2s-staging"

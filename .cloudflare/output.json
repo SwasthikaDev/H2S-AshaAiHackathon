@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "include": [
+    "frontend/**",
+    "worker.js",
+    "package.json",
+    "wrangler.toml"
+  ],
+  "exclude": [
+    "node_modules/**",
+    "backend/**",
+    ".git/**",
+    "**/.DS_Store",
+    "**/*.log"
+  ],
+  "main": "worker.js",
+  "site": {
+    "bucket": "frontend",
+    "entry-point": "workers-site"
+  }
+}
