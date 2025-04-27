@@ -459,7 +459,7 @@ async function searchJobsAndOpportunities(skills, searchType = 'jobs') {
         
         // If we couldn't get results from direct scraping, use Gemini to generate suggestions
         if (results.length === 0) {
-            const geminiApiKey = 'AIzaSyDJVw5l0CsIvi4Gt1Pq_EjVJggFKLQVdQ0';
+            const geminiApiKey = 'your_api_key';
             const ai = new GoogleGenerativeAI(geminiApiKey);
             const model = ai.getGenerativeModel({ model: "gemini-1.5-flash" });
             
