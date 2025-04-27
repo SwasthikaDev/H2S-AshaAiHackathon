@@ -1,5 +1,7 @@
 // API URL
-const API_URL = 'http://localhost:9002/api';
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+    ? 'http://localhost:9002/api' 
+    : 'https://asha-ai-h2s.swasthikadevadiga2.workers.dev/api';
 
 // Check authentication on protected pages
 function checkAuth() {

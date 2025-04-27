@@ -2,16 +2,20 @@
   "name": "jobsforher-foundation",
   "version": "1.0.0",
   "description": "JobsForHer Foundation website with n8n chatbot integration",
-  "main": "index.js",
+  "main": "worker.js",
   "scripts": {
     "start": "concurrently \"npm run backend\" \"npm run frontend\"",
     "backend": "cd backend && node server.js",
-    "frontend": "cd frontend && python -m http.server 5000"
+    "frontend": "cd frontend && python -m http.server 5000",
+    "build": "npm install",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.0",
     "@n8n/chat": "^0.27.1"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "wrangler": "^4.13.2"
   }
 }

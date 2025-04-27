@@ -1,0 +1,6 @@
+name = "asha-ai-h2s"
+main = "worker.js"
+compatibility_date = "2025-04-27"
+
+[site]
+bucket = "./frontend"
