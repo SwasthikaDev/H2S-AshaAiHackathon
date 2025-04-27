@@ -81,15 +81,48 @@ async function handleStaticAsset(request, path) {
     githubPath = githubPath.substring(1); // Remove the dot but keep the slash
   }
   
-  // Fetch the asset from GitHub repository
-  try {
-    const response = await fetch(`https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend${githubPath}`);
-    
-    if (response.ok) {
+  // Try multiple possible paths for images
+  const possiblePaths = [
+    // Original path
+    `https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend${githubPath}`,
+    // Public folder path
+    `https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend/public${githubPath}`,
+    // Direct public/images path for image files
+    extension.match(/\.(png|jpg|jpeg|gif|svg|ico)$/i) ? 
+      `https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend/public/images${githubPath.substring(githubPath.lastIndexOf('/'))}` : null,
+    // Try without leading slash
+    githubPath.startsWith('/') ? 
+      `https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend${githubPath.substring(1)}` : null,
+    // Try with images path explicitly
+    githubPath.includes('images/') ? null : 
+      `https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend/public/images/${githubPath.substring(githubPath.lastIndexOf('/') + 1)}`,
+  ].filter(Boolean); // Remove null entries
+  
+  // Try each path in sequence until one works
+  let content = null;
+  let response = null;
+  
+  for (const tryPath of possiblePaths) {
+    try {
+      console.log(`Trying path: ${tryPath}`);
+      response = await fetch(tryPath);
+      
+      if (response.ok) {
+        console.log(`Successfully loaded from: ${tryPath}`);
+        break; // Exit the loop if we found a working path
+      }
+    } catch (error) {
+      console.error(`Error fetching from ${tryPath}: ${error.message}`);
+    }
+  }
+  
+  // If we found a working response, return the content
+  if (response && response.ok) {
+    try {
       // For text-based content
       if (contentType.startsWith('text/') || contentType === 'application/json') {
-        const content = await response.text();
-        return new Response(content, {
+        const textContent = await response.text();
+        return new Response(textContent, {
           headers: {
             'Content-Type': contentType,
             'Cache-Control': 'max-age=3600',
@@ -109,56 +142,20 @@ async function handleStaticAsset(request, path) {
           }
         });
       }
-    } else {
-      console.error(`File not found on GitHub: ${githubPath}, Status: ${response.status}`);
-      
-      // Try without the leading slash as a fallback
-      if (githubPath.startsWith('/')) {
-        const altPath = githubPath.substring(1);
-        const altResponse = await fetch(`https://raw.githubusercontent.com/SwasthikaDev/H2S-AshaAiHackathon/main/frontend/${altPath}`);
-        
-        if (altResponse.ok) {
-          if (contentType.startsWith('text/') || contentType === 'application/json') {
-            const content = await altResponse.text();
-            return new Response(content, {
-              headers: {
-                'Content-Type': contentType,
-                'Cache-Control': 'max-age=3600',
-                'Access-Control-Allow-Origin': '*'
-              }
-            });
-          } else {
-            const blob = await altResponse.blob();
-            const arrayBuffer = await blob.arrayBuffer();
-            return new Response(arrayBuffer, {
-              headers: {
-                'Content-Type': contentType,
-                'Cache-Control': 'max-age=86400',
-                'Access-Control-Allow-Origin': '*'
-              }
-            });
-          }
-        }
-      }
-      
-      return new Response(`File not found: ${assetPath}`, {
-        status: 404,
-        headers: {
-          'Content-Type': 'text/plain',
-          'Access-Control-Allow-Origin': '*'
-        }
-      });
+    } catch (error) {
+      console.error(`Error processing response: ${error.message}`);
     }
-  } catch (error) {
-    console.error(`Error fetching ${githubPath}: ${error.message}`);
-    return new Response(`Error fetching file: ${error.message}`, {
-      status: 500,
-      headers: {
-        'Content-Type': 'text/plain',
-        'Access-Control-Allow-Origin': '*'
-      }
-    });
   }
+  
+  // If we get here, none of the paths worked
+  console.error(`All paths failed for: ${githubPath}`);
+  return new Response(`File not found: ${assetPath}. Tried multiple paths including public/images.`, {
+    status: 404,
+    headers: {
+      'Content-Type': 'text/plain',
+      'Access-Control-Allow-Origin': '*'
+    }
+  });
 }
 
 /**
