@@ -48,6 +48,15 @@ if (loginForm) {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('userId', data.userId);
                 
+                // Store user's name if available
+                if (data.name) {
+                    localStorage.setItem('userName', data.name);
+                } else {
+                    // Extract name from email as fallback
+                    const nameFromEmail = email.split('@')[0];
+                    localStorage.setItem('userName', nameFromEmail);
+                }
+                
                 // Redirect to home page
                 window.location.href = '/';
             } else {
@@ -92,6 +101,9 @@ if (signupForm) {
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('userId', data.userId);
                 
+                // Store user's name
+                localStorage.setItem('userName', name);
+                
                 // Redirect to home page
                 window.location.href = '/';
             } else {
@@ -113,6 +125,7 @@ function isLoggedIn() {
 function logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('userId');
+    localStorage.removeItem('userName');
     window.location.href = '/login.html';
 }
 
